@@ -8,33 +8,62 @@
 
 ## 🚧 Project Progress
 
-### ✅ What’s Done
-- **Dataset Extraction Completed**
-  - Fetched global earthquake data from the [USGS Earthquake Catalog](https://earthquake.usgs.gov/fdsnws/event/1/) using a custom script.
-  - Time range covered: **2000 to June 2025**
-  - Total records: **~175,948**
-  - Saved as: `usgs_earthquake_data_2000_2025.csv`
+### ✅ Dataset Extraction Completed
+- Fetched global earthquake data from the **USGS Earthquake Catalog** using a custom script
+- Time range covered: **2000 to June 2025**
+- Total records: **~175,948**
+- Saved as: `dataset/usgs_earthquake_data_2000_2025.csv`
+- Script used: `scripts/earthquake_dataset_extraction.py`
+- Data collected in **safe 4-year chunks** to avoid API rate limits
 
-- **Data Fetch Script**
-  - Included in the `Scripts/` folder as `earthquake_dataset_extraction.py`
-  - Data collected in safe 4-year chunks to avoid API limits
+---
 
-- **Basic EDA and Data Cleaning Completed**
-  - Analyzed distributions of key features (`depth`, `mag`, `latitude`, `longitude`)
-  - Identified and handled missing values, outliers, and inconsistencies
-  - Parsed the `time` column into usable components like `year`, `month`, etc.
-  - Notebook saved as: `data_preprocessing/data_cleaning.ipynb`
+### ✅ Basic EDA and Data Cleaning Completed
+- Analyzed distributions of key features (`depth`, `mag`, `latitude`, `longitude`)
+- Handled missing values, outliers, and inconsistencies
+- Parsed `time` into separate columns like `year`, `month`, and `day`
+- Notebook saved as: `Data_Preprocessing/data_cleaning_eda.ipynb`
+
+---
+
+### ✅ Feature Engineering Completed
+- Created derived features:
+  - `elapsed_years`: Time since start of dataset
+  - `month_sin` & `month_cos`: Cyclical encoding of month
+  - `cluster_id`: Seismic region clusters via KMeans
+  - `cluster_activity`: Historical frequency of earthquakes in each region
+- Dropped redundant columns (`year`, `month`)
+- Validated new features with correlation heatmap
+- Notebook saved as: `Feature_Engineering/feature_creation_validation.ipynb`
 
 ---
 
 ### 🛠️ Up Next
-
-- **Feature Engineering**
-  - Creating derived features like `elapsed_years`, `month_sin`, and spatial clusters (`cluster_id`)
-  - Evaluating new features via correlation heatmaps and box plots against magnitude
-  - Preparing cleaned dataset for model training
+- Model training using XGBoost
+- Visualize feature importances and prediction results
+- Build a Streamlit frontend for user-friendly magnitude estimation
 
 ---
 
-📁 Repo Structure (So Far)
+## 📁 Repo Structure
+<details>
+<summary>Click to expand</summary>
 
+<br>
+
+```text
+SeismoCast/
+├── Data_Preprocessing/
+│   └── data_cleaning_eda.ipynb                # Initial EDA and data cleaning
+│
+├── Feature_Engineering/
+│   └── feature_creation_validation.ipynb      # Feature derivation and correlation validation
+│
+├── dataset/
+│   └── usgs_earthquake_data_2000_2025.csv     # Fetched USGS dataset
+│
+├── scripts/
+│   └── earthquake_dataset_extraction.py       # Script for USGS API data fetching
+│
+└── README.md
+</details> 
