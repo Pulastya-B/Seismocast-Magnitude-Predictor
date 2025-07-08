@@ -16,7 +16,7 @@
   - Saved as: `usgs_earthquake_data_2000_2025.csv`
 
 - **Data Fetch Script**
-  - Included in the `scripts/` folder as `usgs_data_fetcher.py`
+  - Included in the `Scripts/` folder as `earthquake_dataset_extraction.py`
   - Data collected in safe 4-year chunks to avoid API limits
 
 ### 🔍 Currently Working On
