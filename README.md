@@ -19,12 +19,22 @@
   - Included in the `Scripts/` folder as `earthquake_dataset_extraction.py`
   - Data collected in safe 4-year chunks to avoid API limits
 
-### 🔍 Currently Working On
-- **Exploratory Data Analysis (EDA)**
-  - Analyzing feature distributions (`depth`, `mag`, `latitude`, etc.)
-  - Checking for missing values, outliers, and anomalies
-  - Parsing `time` for year/month extraction
+- **Basic EDA and Data Cleaning Completed**
+  - Analyzed distributions of key features (`depth`, `mag`, `latitude`, `longitude`)
+  - Identified and handled missing values, outliers, and inconsistencies
+  - Parsed the `time` column into usable components like `year`, `month`, etc.
+  - Notebook saved as: `data_preprocessing/data_cleaning.ipynb`
 
 ---
 
-## 📁 Repo Structure (So Far)
+### 🛠️ Up Next
+
+- **Feature Engineering**
+  - Creating derived features like `elapsed_years`, `month_sin`, and spatial clusters (`cluster_id`)
+  - Evaluating new features via correlation heatmaps and box plots against magnitude
+  - Preparing cleaned dataset for model training
+
+---
+
+📁 Repo Structure (So Far)
+
