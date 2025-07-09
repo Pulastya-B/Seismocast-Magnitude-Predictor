@@ -138,4 +138,4 @@ st.markdown("""
 > Ideal for awareness, educational use, and planning — not for emergency response or forecasting.
 """)
 
-st.caption("SeismoCast | Built with ❤️ by Pulastya Bhagwat")
+st.caption("SeismoCast | Built with ❤️ by TechRx")
