@@ -47,7 +47,7 @@ st.set_page_config(page_title="SeismoCast", layout="centered")
 st.markdown("""
     <style>
     .stApp {
-        background-image: url('https://images.unsplash.com/photo-1607990281364-68e08b2abacc');
+        background-image: url('https://unsplash.com/photos/a-crack-in-the-middle-of-a-road-in-the-middle-of-nowhere-fClNK-MIz_E');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
