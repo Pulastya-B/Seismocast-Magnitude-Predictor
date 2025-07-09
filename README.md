@@ -4,6 +4,12 @@
 
 ---
 
+## 🚀 Live Demo
+
+🔗 [Try the SeismoCast App](https://techrx-seismocast-deployed.streamlit.app/)  
+*(Click to launch Streamlit app and test real-time earthquake scenarios)*
+---
+
 ## ✅ Project Progress
 
 ### 📥 Dataset Extraction
@@ -45,19 +51,14 @@
 
 ---
 
-### 💻 Streamlit App (Offline for now)
-- Built an interactive app to:
-  - Predict magnitude from user input (lat/lon/depth/date)
-  - Perform reverse geolocation
-  - Visualize earthquakes by year
+### 💻 Frontend: Streamlit UI
+- Built an interactive web app using **Streamlit**
+- Key features:
+  - Predict magnitude using lat/lon/depth/date input
+  - Reverse geolocation lookup
+  - Earthquake map slider (by year)
+  - Visualization of top quakes
 - File: `seismocast_app_final.py`
-
----
-
-## 🛠️ Up Next
-- [ ] **Deploy on Streamlit Cloud**  
-  *(App not live yet – deployment in progress)*
-- [ ] Finalize requirements.txt and hosting config
 
 ---
 
@@ -84,5 +85,10 @@ SeismoCast/
 ├── Model_Building/
 │   └── Model_Training.py
 │
+├── app/
+│   ├── seismocast_app.py
+│   ├── modelXGB_final.pkl
+│   └── df_streamlit.csv
+├── requirements.txt
 └── README.md
 </details> 
