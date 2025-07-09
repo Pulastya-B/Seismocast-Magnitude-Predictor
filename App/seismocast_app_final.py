@@ -9,11 +9,11 @@ from datetime import datetime
 from geopy.geocoders import Nominatim
 
 # Load trained model
-model = joblib.load("modelXGB2.pkl")
+model = joblib.load("App/modelXGB2.pkl")
 
 # Load dataset that contains cluster_id
 try:
-    df = pd.read_csv("df_streamlit.csv")
+    df = pd.read_csv("App/df_streamlit.csv")
 except FileNotFoundError:
     raise ValueError("df_streamlit.csv not found. Please ensure it's in your Colab environment.")
 
