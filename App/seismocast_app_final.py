@@ -65,14 +65,14 @@ st.markdown("### 🌍🫨🫨 Enter Earthquake Details")
 col1, col2 = st.columns(2)
 
 with col1:
-    lat = st.number_input("Latitude", value=27.7)
+    lat = st.number_input("Latitude", value=28.61)
     
     depth = st.number_input("Depth (km)", value=1.0)
 
 with col2:
-    lon = st.number_input("Longitude", value=85.3)
-    date = st.date_input("Select Date", value=datetime(2023, 1, 1),
-                         min_value=datetime(1960, 1, 1), max_value=datetime(2040, 12, 31))
+    lon = st.number_input("Longitude", value=77.20)
+    date = st.date_input("Select Date", value=datetime(2024, 1, 1),
+                         min_value=datetime(2000, 1, 1), max_value=datetime(2050, 12, 31))
     year = date.year
     month = date.month
     day = date.day
@@ -111,9 +111,9 @@ if st.button("🎯 Predict"):
 # ------------------------------
 if st.button("🧪 Try Sample Input"):
     st.session_state.update({
-        "Latitude": 35.6895,
-        "Longitude": 139.6917,
-        "Depth": 15.0,
+        "Latitude": 26.2124,
+        "Longitude": 78.1772,
+        "Depth": 1.0,
         "Date": datetime(2027, 8, 11)
     })
     st.rerun()
