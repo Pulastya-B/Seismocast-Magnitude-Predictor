@@ -58,7 +58,7 @@
   - Reverse geolocation lookup
   - Earthquake map slider (by year)
   - Visualization of top quakes
-- File: `seismocast_app_final.py`
+- File: `App/seismocast_app_final.py`
 
 ---
 
@@ -90,5 +90,6 @@ SeismoCast/
 │   ├── modelXGB_final.pkl
 │   └── df_streamlit.csv
 ├── requirements.txt
+│
 └── README.md
 </details> 
