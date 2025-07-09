@@ -47,7 +47,7 @@ st.set_page_config(page_title="SeismoCast", layout="centered")
 st.markdown("""
     <style>
     .stApp {
-        background-image: url('https://images.unsplash.com/photo-1635068741358-ab1b9813623f?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-image: url('https://images.unsplash.com/photo-1607990281364-68e08b2abacc');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
