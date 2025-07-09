@@ -7,6 +7,11 @@ import numpy as np
 import joblib
 from datetime import datetime
 from geopy.geocoders import Nominatim
+from opencage.geocoder import OpenCageGeocode
+import requests
+import streamlit as st
+
+OPENCAGE_API_KEY = st.secrets["opencage_api_key"]
 
 # Load trained model
 model = joblib.load("App/modelXGB2.pkl")
@@ -23,9 +28,14 @@ except FileNotFoundError:
 @st.cache_data(show_spinner=False)
 def reverse_geocode(lat, lon):
     try:
-        geolocator = Nominatim(user_agent="seismocast")
-        location = geolocator.reverse((lat, lon), timeout=5)
-        return location.address if location else "Unknown"
+        api_key = st.secrets["opencage_api_key"]
+        url = f"https://api.opencagedata.com/geocode/v1/json?q={lat}+{lon}&key={api_key}"
+        response = requests.get(url)
+        data = response.json()
+        if data["results"]:
+            return data["results"][0]["formatted"]
+        else:
+            return "Unknown location"
     except:
         return "Geocoding Failed"
 
