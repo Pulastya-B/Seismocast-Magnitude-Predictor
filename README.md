@@ -37,9 +37,15 @@
 - Notebook saved as: `Feature_Engineering/feature_creation_validation.ipynb`
 
 ---
+### ✅ Trained the Model and Performed Model Evaluation
+
+- Trained XGBoost regressor on cleaned dataset with engineered features
+- Visualized feature importance using gain-based scores
+- Identified top contributing features (e.g., cluster_id, depth, cluster_activity)
+- Highlighted low-impact features to be excluded in future iterations
+- Prepared for next steps: feature selection & hyperparameter tuning
 
 ### 🛠️ Up Next
-- Model training using XGBoost
 - Visualize feature importances and prediction results
 - Build a Streamlit frontend for user-friendly magnitude estimation
 
@@ -64,6 +70,9 @@ SeismoCast/
 │
 ├── scripts/
 │   └── earthquake_dataset_extraction.py       # Script for USGS API data fetching
+|
+├── Model_Building/
+│   └── Model_Training.py
 │
 └── README.md
 </details> 
