@@ -1,6 +1,6 @@
 # 🌍 SeismoCast: Earthquake Magnitude Estimation using Machine Learning
 
-**SeismoCast** is a machine learning-based simulation tool designed to estimate earthquake magnitudes using spatial and temporal features like latitude, longitude, depth, and time. This project is developed as part of a hackathon and demonstrates how machine learning can assist in seismic awareness and risk analysis.
+**SeismoCast** is a machine learning-based simulation tool designed to estimate earthquake magnitudes using spatial and temporal features like latitude, longitude, depth, and time. This project is developed as part of a personal project and demonstrates how machine learning can assist in seismic awareness and risk analysis.
 
 ---
 
